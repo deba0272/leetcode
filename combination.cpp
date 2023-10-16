@@ -1,4 +1,3 @@
-
 class Solution {
 public:
 void sol(int n,int k,vector<vector<int>>&ans,vector<int>&v){
@@ -12,11 +11,12 @@ void sol(int n,int k,vector<vector<int>>&ans,vector<int>&v){
          return;
         }
          v.push_back(n);
+  //recursion 
        sol(n-1,k,ans,v);
        v.pop_back();
        sol(n-1,k,ans,v);
 }
-    vector<vector<int>> combine(int n, int k) {
+    vector<vector<int>> combine(int n,int k) {
         vector<vector<int>> ans;
         vector<int>v;
         sol(n,k,ans,v);
